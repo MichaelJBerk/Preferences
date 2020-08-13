@@ -195,6 +195,12 @@ final class PreferencesTabViewController: NSViewController, PreferencesStyleCont
 		let animatableWindow = animated ? window.animator() : window
 		animatableWindow.setFrame(frame, display: false)
 	}
+	
+	func resizeFunc() {
+		if let at = activeTab {
+			setWindowFrame(for: preferencePanes[at], animated: true)
+		}
+	}
 }
 
 extension PreferencesTabViewController: NSToolbarDelegate {

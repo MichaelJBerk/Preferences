@@ -111,6 +111,10 @@ public final class PreferencesWindowController: NSWindowController {
 		window.setFrameUsingName(.preferences)
 		window.setFrameAutosaveName(.preferences)
 	}
+	
+	public func resizeTab() {
+		tabViewController.resizeFunc()
+	}
 }
 
 @available(macOS 10.15, *)
